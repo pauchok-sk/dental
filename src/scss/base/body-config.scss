@@ -1,0 +1,23 @@
+.body-hidden {
+  overflow: hidden;
+  touch-action: none;
+}
+.body {
+}
+
+.sect-m {
+  margin: 50px 0px;
+}
+.s-title {
+  font-weight: 500;
+  font-size: 40px;
+  margin: 0px 0px 40px 0px;
+
+  @include laptop-middle {
+    font-size: 32px;
+  }
+  @include tablet {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+}
