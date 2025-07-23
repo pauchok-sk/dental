@@ -1,0 +1,5 @@
+[data-more-item] {
+  transform: translateY(-20px);
+  opacity: 1;
+  transition: opacity .3s ease, transform .3s ease;
+}

@@ -8,6 +8,13 @@
 .sect-m {
   margin: 50px 0px;
 }
+.sect-p {
+  padding: 50px 0px;
+  
+  &._gray {
+    background-color: var(--gray);
+  }
+}
 .s-title {
   font-weight: 500;
   font-size: 40px;

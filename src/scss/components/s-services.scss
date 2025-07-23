@@ -1,0 +1,160 @@
+.s-services {
+  @include tablet {
+    overflow: hidden;
+  }
+  &__head {
+    @include flex-between;
+    gap: 20px;
+  }
+  &__nav-slider {
+    flex: 1;
+    @include tablet {
+      overflow: visible !important;
+    }
+
+    .swiper-slide {
+      width: fit-content !important;
+    }
+  }
+  &__arrows {
+    display: flex;
+    gap: 15px;
+    @include tablet {
+      display: none;
+    }
+  }
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 40px;
+    @include tablet {
+      margin-top: 30px;
+    }
+
+    [data-more-item] {
+      &:nth-child(n + 4) {
+        display: none;
+      }
+    }
+  }
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background-color: white;
+    border-radius: 18px;
+    gap: 30px;
+
+    @include laptop-min {
+      flex-direction: column-reverse;
+    }
+    @include tablet {
+      padding: 20px;
+    }
+  }
+  &__item-body {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 770px;
+    @include laptop-min {
+      flex: none;
+      width: 100%;
+    }
+  }
+  &__item-head {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 30px;
+    @include tablet {
+      flex-wrap: wrap;
+    }
+  }
+  &__item-title {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 125%;
+    max-width: 235px;
+    margin: 0px 0px 20px 0px;
+    @include tablet {
+      font-size: 20px;
+      max-width: none;
+    }
+  }
+  &__item-price {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 125%;
+    @include tablet {
+      font-size: 20px;
+    }
+  }
+  &__item-content {
+    flex: 0 1 400px;
+    font-size: 15px;
+    line-height: 167%;
+    color: rgba(0, 0, 0, 0.5);
+
+    @include tablet {
+      flex: none;
+      width: 100%;
+    }
+
+    ul,
+    p {
+      margin: 0;
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+    ul {
+      padding-left: 25px;
+    }
+  }
+  &__item-btn {
+    margin-top: auto;
+    width: 300px;
+    max-width: 100%;
+    @include tablet-min {
+      width: 100%;
+    }
+  }
+  &__item-gallery {
+    position: relative;
+    z-index: 1;
+    border-radius: 8px;
+    width: 300px;
+    overflow: hidden;
+    aspect-ratio: 1/0.9;
+    flex-shrink: 0;
+
+    @include tablet-min {
+      margin: 0 auto;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      background: linear-gradient(
+        360deg,
+        #151515 0%,
+        rgba(32, 32, 32, 0.6) 58.23%
+      );
+      inset: 0;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__more-btn {
+    width: 100%;
+    margin-top: 50px;
+    @include tablet {
+      margin-top: 30px;
+    }
+  }
+}

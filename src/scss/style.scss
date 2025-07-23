@@ -9,6 +9,9 @@
 // ui
 @import "./ui/button";
 @import "./ui/list";
+@import "./ui/slider";
+@import "./ui/more-items";
+@import "./ui/tab";
 
 // widgets
 @import "./widgets/burger";
@@ -18,5 +21,7 @@
 
 @import "./components/intro";
 @import "./components/s-about";
+@import "./components/s-services";
+@import "./components/s-quiz";
 
 @import "./components/footer";

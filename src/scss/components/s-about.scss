@@ -1,0 +1,80 @@
+.s-about {
+  &__wrapper {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 30px;
+    @include laptop-min {
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  &__body {
+    flex: 0 1 670px;
+    @include laptop-min {
+      flex: none;
+      width: 100%;
+    }
+  }
+  &__content {
+    font-size: 18px;
+    line-height: 139%;
+
+    @include laptop-min {
+      font-size: 16px;
+    }
+
+    p {
+      margin: 0;
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  &__btn {
+    width: 350px;
+    max-width: 100%;
+    margin-top: 50px;
+    @include tablet {
+      margin-top: 30px;
+    }
+    @include tablet-min {
+      width: 100%;
+    }
+  }
+  &__gallery {
+    position: relative;
+    width: 480px;
+    max-width: 100%;
+    aspect-ratio: 1/0.6;
+    flex-shrink: 0;
+    margin-right: 15px;
+    z-index: 1;
+    @include laptop-min {
+      margin-top: 15px;
+      width: 540px;
+    }
+    
+    &::before {
+      position: absolute;
+      content: "";
+      top: -15px;
+      right: -15px;
+      left: 15px;
+      bottom: 15px;
+      background-color: var(--dark);
+      border-radius: 8px;
+      z-index: -1;
+    }
+    
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      border-radius: 8px;
+      filter: brightness(80%);
+    }
+
+  }
+}

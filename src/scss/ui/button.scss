@@ -31,6 +31,7 @@
 
 .btn-s {
   @include flex-center;
+  gap: 10px;
   cursor: pointer;
   background-color: var(--dark);
   border-radius: 50px;
@@ -42,8 +43,10 @@
   font-size: 15px;
   color: white;
 
-  transition: color .2s ease, background-color .2s ease;
-  
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease;
+
   @include hover {
     background-color: transparent;
     color: var(--dark);
@@ -60,12 +63,58 @@
     }
   }
   &._white-outline {
-    background-color: transparent;
+    background-color: var(--dark);
     color: white;
     border-color: white;
     @include hover {
       background-color: white;
       color: var(--dark);
     }
+  }
+  &._dark-outline {
+    background-color: white;
+    color: var(--dark);
+    @include hover {
+      color: white;
+      background-color: var(--dark);
+    }
+
+    &._active {
+      color: white;
+      background-color: var(--dark);
+    }
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.play-btn {
+  @include flex-center;
+  position: absolute;
+  cursor: pointer;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  border: 1px solid white;
+  background-color: var(--dark);
+  border-radius: 50%;
+  color: white;
+  z-index: 1;
+
+  transition: opacity 0.2s ease;
+
+  @include hover {
+    opacity: 0.8;
+  }
+
+  svg {
+    width: 26px;
+    height: 26px;
+    margin-left: 2px;
   }
 }
