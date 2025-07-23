@@ -1,11 +1,50 @@
 .s-quiz {
-  border-radius: 18px;
-  background-color: var(--dark);
-  color: white;
+  &__slide {
+    position: relative;
+    border-radius: 18px;
+    background-color: var(--dark);
+    color: white;
+    z-index: 1;
+
+    &._line {
+      &::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        bottom: 0;
+        width: 325px;
+        left: 27%;
+        background: linear-gradient(
+          180deg,
+          #f5f5f5 0%,
+          #fff 51.31%,
+          #b2b2b2 100%
+        );
+        z-index: -1;
+
+        @include laptop-middle {
+          left: 200px;
+          width: 200px;
+        }
+        @include laptop-min {
+          display: none;
+        }
+      }
+    }
+  }
   &__head {
     @include flex-between;
     gap: 30px;
     margin-bottom: 110px;
+    @include laptop-middle {
+      margin-bottom: 80px;
+    }
+    @include laptop-min {
+      margin-bottom: 60px;
+    }
+    @include tablet {
+      margin-bottom: 30px;
+    }
   }
   &__logo {
     display: block;
@@ -27,7 +66,7 @@
     font-weight: 700;
     font-size: 32px;
 
-    transition: opacity .2s ease;
+    transition: opacity 0.2s ease;
     @include hover {
       opacity: 0.7;
     }
@@ -65,5 +104,121 @@
         display: none;
       }
     }
+  }
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    @include tablet {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+  &__img {
+    display: block;
+    align-self: start;
+    width: 605px;
+    flex-shrink: 0;
+    @include laptop-middle {
+      width: 515px;
+    }
+    @include laptop-min {
+      width: 350px;
+    }
+  }
+  &__main {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 505px;
+    @include tablet {
+      flex: none;
+      width: 100%;
+    }
+  }
+  &__title {
+    font-size: 32px;
+    line-height: 156%;
+    text-transform: uppercase;
+    max-width: 400px;
+    margin: 0px 0px 40px 0px;
+    @include laptop-min {
+      font-size: 26px;
+      margin-bottom: 30px;
+    }
+    @include tablet {
+      max-width: none;
+      font-size: 24px;
+    }
+  }
+  &__content {
+    font-size: 15px;
+    line-height: 167%;
+    color: var(--gray);
+    margin: 0px 0px 50px 0px;
+  }
+  &__btn-get {
+    margin-bottom: 20px;
+    padding: 14px 37px !important;
+  }
+  &__mail {
+    display: block;
+    font-size: 15px;
+    line-height: 167%;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    opacity: 0.5;
+    margin-top: auto;
+
+    transition: opacity 0.2s ease;
+    @include hover {
+      opacity: 1;
+    }
+  }
+  &__slide-title {
+    margin: 0px 0px 80px 0px;
+  }
+  &__veriants-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 65px;
+    row-gap: 30px;
+    @include laptop-middle {
+      gap: 30px;
+    }
+    @include laptop-min {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    @include mobile {
+      // grid-template-columns: 1fr;
+    }
+  }
+  &__input-radio {
+    display: none;
+    &:checked + label {
+      .s-quiz__var-img {
+        filter: brightness(50%);
+      }
+    }
+  }
+  &__var-gallery {
+    display: block;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 148%;
+  }
+  &__var-img {
+    width: 100%;
+    border-radius: 6px;
+    display: block;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    margin-bottom: 15px;
+
+    transition: filter .2s ease;
   }
 }

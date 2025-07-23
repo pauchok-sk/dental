@@ -33,6 +33,11 @@
     }
 
     [data-more-item] {
+      @include first(3) {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+        display: block !important;
+      }
       &:nth-child(n + 4) {
         display: none;
       }
