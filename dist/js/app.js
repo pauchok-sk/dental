@@ -159,6 +159,17 @@
                 }
             });
         }
+        const resSlider = document.querySelector(".s-res__slider");
+        if (resSlider) {
+            new Swiper(resSlider, {
+                spaceBetween: 35,
+                slidesPerView: 4,
+                navigation: {
+                    prevEl: ".s-res .slider-btn._prev",
+                    nextEl: ".s-res .slider-btn._next"
+                }
+            });
+        }
     }
     function spoller() {
         const spollersArray = document.querySelectorAll("[data-spollers]");

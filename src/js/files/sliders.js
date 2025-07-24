@@ -17,4 +17,17 @@ export default function sliders() {
       },
     });
   }
+
+  const resSlider = document.querySelector(".s-res__slider");
+
+  if (resSlider) {
+    const swiper = new Swiper(resSlider, {
+      spaceBetween: 35,
+      slidesPerView: 4,
+      navigation: {
+        prevEl: ".s-res .slider-btn._prev",
+        nextEl: ".s-res .slider-btn._next",
+      },
+    });
+  }
 }
