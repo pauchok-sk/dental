@@ -1,5 +1,5 @@
-<section class="s-quiz">
-  <div class="s-quiz__slide _line sect-p">
+<section class="s-quiz sect-p">
+  <div class="s-quiz__slide _line" id="quiz-start">
     <div class="container">
       <div class="s-quiz__head">
         <a href="/" class="s-quiz__logo">
@@ -16,46 +16,263 @@
         <img src="@img/quiz-img.png" alt="image" class="s-quiz__img" />
         <div class="s-quiz__main">
           <h2 class="s-quiz__title">
-            Получите протокол работы с тотальным протезированием all-on-4 за 5 мин
+            Получите протокол работы с тотальным протезированием all-on-4 за 5
+            мин
           </h2>
           <p class="s-quiz__content">
             Ответьте на 4 вопроса и получите
             <br />
             результат от квалифицированных специалистов!
           </p>
-          <button class="btn-s _white-outline s-quiz__btn-get">Получить протокол</button>
-          <a href="mailto:dentalresource@mail.ru" class="s-quiz__mail">dentalresource@mail.ru</a>
+          <button class="btn-s _white-outline s-quiz__btn-get" id="quiz-get">
+            Получить протокол
+          </button>
+          <a href="mailto:dentalresource@mail.ru" class="s-quiz__mail">
+            dentalresource@mail.ru
+          </a>
         </div>
       </div>
     </div>
   </div>
-  <form action="#">
-    <div class="s-quiz__slide sect-p">
-      <div class="container">
-        <h3 class="s-title s-quiz__slide-title">1. На какой челюсти хотите поставить протез All-on-4?</h3>
-        <div class="s-quiz__veriants-gallery">
-          <input type="radio" name="Челюсть" value="На нижней челюсти" id="jaw-1" class="s-quiz__input-radio">
-          <label for="jaw-1" class="s-quiz__var-gallery">
-            <img src="@img/quiz-var.jpg" alt="image" class="s-quiz__var-img">
-            <span>На нижней челюсти</span>
-          </label>
-          <input type="radio" name="Челюсть" value="На нижней челюсти" id="jaw-2" class="s-quiz__input-radio">
-          <label for="jaw-2" class="s-quiz__var-gallery">
-            <img src="@img/quiz-var-2.jpg" alt="image" class="s-quiz__var-img">
-            <span>На верхней челюсти</span>
-          </label>
-          <input type="radio" name="Челюсть" value="На нижней челюсти" id="jaw-3" class="s-quiz__input-radio">
-          <label for="jaw-3" class="s-quiz__var-gallery">
-            <img src="@img/quiz-var-3.jpg" alt="image" class="s-quiz__var-img">
-            <span>На обеих челюсях</span>
-          </label>
-          <input type="radio" name="Челюсть" value="На нижней челюсти" id="jaw-4" class="s-quiz__input-radio">
-          <label for="jaw-4" class="s-quiz__var-gallery">
-            <img src="@img/quiz-var-4.jpg" alt="image" class="s-quiz__var-img">
-            <span>Не знаю, нужна консультация</span>
-          </label>
+  <form action="#" class="s-quiz__form" style="display: none" id="quiz-form">
+    <div class="s-quiz__form-wrapper">
+      <div class="s-quiz__slide" style="display: none; opacity: 0">
+        <div class="container">
+          <h3 class="s-title s-quiz__slide-title">
+            1. На какой челюсти хотите поставить протез All-on-4?
+          </h3>
+          <div class="s-quiz__variants-gallery">
+            <input
+              type="radio"
+              name="Челюсть"
+              value="На нижней челюсти"
+              id="jaw-1"
+              checked
+              class="s-quiz__input-gallery-radio"
+            />
+            <label for="jaw-1" class="s-quiz__var-gallery">
+              <img
+                src="@img/quiz-var.jpg"
+                alt="image"
+                class="s-quiz__var-img"
+              />
+              <span>На нижней челюсти</span>
+            </label>
+            <input
+              type="radio"
+              name="Челюсть"
+              value="На нижней челюсти"
+              id="jaw-2"
+              class="s-quiz__input-gallery-radio"
+            />
+            <label for="jaw-2" class="s-quiz__var-gallery">
+              <img
+                src="@img/quiz-var-2.jpg"
+                alt="image"
+                class="s-quiz__var-img"
+              />
+              <span>На верхней челюсти</span>
+            </label>
+            <input
+              type="radio"
+              name="Челюсть"
+              value="На нижней челюсти"
+              id="jaw-3"
+              class="s-quiz__input-gallery-radio"
+            />
+            <label for="jaw-3" class="s-quiz__var-gallery">
+              <img
+                src="@img/quiz-var-3.jpg"
+                alt="image"
+                class="s-quiz__var-img"
+              />
+              <span>На обеих челюсях</span>
+            </label>
+            <input
+              type="radio"
+              name="Челюсть"
+              value="На нижней челюсти"
+              id="jaw-4"
+              class="s-quiz__input-gallery-radio"
+            />
+            <label for="jaw-4" class="s-quiz__var-gallery">
+              <img
+                src="@img/quiz-var-4.jpg"
+                alt="image"
+                class="s-quiz__var-img"
+              />
+              <span>Не знаю, нужна консультация</span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="s-quiz__slide" style="display: none; opacity: 0">
+        <div class="container">
+          <h3 class="s-title s-quiz__slide-title">
+            2. Сколько зубов отсутствует?
+          </h3>
+          <div class="s-quiz__variants">
+            <input
+              type="radio"
+              name="count-teeth"
+              id="count-teeth-1"
+              checked
+              class="s-quiz__input-radio"
+            />
+            <label for="count-teeth-1" class="s-quiz__label-radio">
+              1-2 зуба
+            </label>
+            <input
+              type="radio"
+              name="count-teeth"
+              id="count-teeth-2"
+              class="s-quiz__input-radio"
+            />
+            <label for="count-teeth-2" class="s-quiz__label-radio">
+              3-5 зуба
+            </label>
+            <input
+              type="radio"
+              name="count-teeth"
+              id="count-teeth-3"
+              class="s-quiz__input-radio"
+            />
+            <label for="count-teeth-3" class="s-quiz__label-radio">
+              6-8 зуба
+            </label>
+            <input
+              type="radio"
+              name="count-teeth"
+              id="count-teeth-4"
+              class="s-quiz__input-radio"
+            />
+            <label for="count-teeth-4" class="s-quiz__label-radio">
+              На всей челюсти
+            </label>
+          </div>
+        </div>
+      </div>
+      <div
+        class="s-quiz__end _center"
+        id="quiz-end"
+        style="display: none; opacity: 0"
+      >
+        <div class="container">
+          <div class="s-quiz__form-gallery">
+            <img src="@img/quiz.jpg" alt="image" />
+          </div>
+          <div class="s-quiz__form-body">
+            <a href="/" class="s-quiz__form-logo">
+              <img src="@img/logo-white.svg" alt="logo" />
+            </a>
+            <p class="s-quiz__form-content">
+              Заполните форму, чтобы получить протокол для работы с протезами
+              ALL-ON-4
+            </p>
+            <div class="s-quiz__form-main">
+              <div class="input-control">
+                <input
+                  type="text"
+                  placeholder="Имя и фамилия"
+                  class="input"
+                  required
+                />
+              </div>
+              <div class="input-control">
+                <input
+                  type="tel"
+                  placeholder="Телефон"
+                  class="input"
+                  required
+                />
+              </div>
+              <input
+                type="checkbox"
+                id="quiz-policy"
+                checked
+                required
+                class="input-policy"
+              />
+              <label for="quiz-policy" class="label-policy">
+                <span>
+                  Я соглашаюсь на обработку персональных данных согласно
+                  <a href="#" target="_blank">политике конфиденциальности</a>
+                </span>
+              </label>
+              <button class="btn-s _white-outline s-quiz__form-submit">
+                Получить протокол
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container" id="quiz-nav" style="display: none; opacity: 0">
+      <div class="s-quiz__form-nav">
+        <div class="btn-s _white-outline s-quiz__form-nav-btn" id="quiz-prev">
+          <svg>
+            <use xlink:href="img/icons/icons.svg#icon-arrow-prev-line"></use>
+          </svg>
+          <span>Назад</span>
+        </div>
+        <div class="s-quiz__pagination" id="quiz-pagination"></div>
+        <div class="btn-s _white s-quiz__form-nav-btn" id="quiz-next">
+          <span>Следующий вопрос</span>
+          <svg>
+            <use xlink:href="img/icons/icons.svg#icon-arrow-next-line"></use>
+          </svg>
         </div>
       </div>
     </div>
   </form>
+  <div class="s-quiz__docs" id="quiz-docs" style="display: none">
+    <div class="container">
+      <h2 class="s-title s-quiz__docs-title">Выберите нужный протокол</h2>
+      <div class="s-quiz__docs-grid">
+        <a href="@img/about.jpg" download="" class="s-quiz__docs-btn">
+          <img src="@img/pdf.svg" alt="icon" />
+          <span>Название протокола</span>
+          <svg>
+            <use xlink:href="img/icons/icons.svg#icon-download"></use>
+          </svg>
+        </a>
+        <a href="@img/about.jpg" download="" class="s-quiz__docs-btn">
+          <img src="@img/pdf.svg" alt="icon" />
+          <span>Название протокола</span>
+          <svg>
+            <use xlink:href="img/icons/icons.svg#icon-download"></use>
+          </svg>
+        </a>
+        <a href="@img/about.jpg" download="" class="s-quiz__docs-btn">
+          <img src="@img/pdf.svg" alt="icon" />
+          <span>Название протокола</span>
+          <svg>
+            <use xlink:href="img/icons/icons.svg#icon-download"></use>
+          </svg>
+        </a>
+        <a href="@img/about.jpg" download="" class="s-quiz__docs-btn">
+          <img src="@img/pdf.svg" alt="icon" />
+          <span>Название протокола</span>
+          <svg>
+            <use xlink:href="img/icons/icons.svg#icon-download"></use>
+          </svg>
+        </a>
+        <a href="@img/about.jpg" download="" class="s-quiz__docs-btn">
+          <img src="@img/pdf.svg" alt="icon" />
+          <span>Название протокола</span>
+          <svg>
+            <use xlink:href="img/icons/icons.svg#icon-download"></use>
+          </svg>
+        </a>
+        <a href="@img/about.jpg" download="" class="s-quiz__docs-btn">
+          <img src="@img/pdf.svg" alt="icon" />
+          <span>Название протокола</span>
+          <svg>
+            <use xlink:href="img/icons/icons.svg#icon-download"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
 </section>

@@ -1,0 +1,51 @@
+.input-control {
+  width: 100%;
+  position: relative;
+}
+.input {
+  padding: 16px 20px;
+  border-radius: 4px;
+  background-color: white;
+  border: none;
+  outline: none;
+  width: 100%;
+
+  font-size: 14px;
+
+  &::placeholder {
+    opacity: 0.7;
+  }
+}
+
+.input-policy {
+  display: none;
+  &:checked + label {
+    &::before {
+      background: url("@img/check.svg") center / 90% no-repeat;
+    }
+  }
+}
+
+.label-policy {
+  display: flex;
+  align-items: start;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  &::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+  }
+
+  a {
+    text-decoration: underline;
+    color: #939393;
+
+    @include hover {
+      text-decoration: none;
+    }
+  }
+}

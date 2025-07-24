@@ -1,10 +1,15 @@
 .s-quiz {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-radius: 18px;
+  background-color: var(--dark);
+  color: white;
+  min-height: 800px;
+  z-index: 1;
+
   &__slide {
-    position: relative;
-    border-radius: 18px;
-    background-color: var(--dark);
-    color: white;
-    z-index: 1;
+    transition: opacity 0.3s ease;
 
     &._line {
       &::before {
@@ -176,8 +181,14 @@
   }
   &__slide-title {
     margin: 0px 0px 80px 0px;
+    @include laptop-min {
+      margin-bottom: 50px;
+    }
+    @include tablet {
+      margin-bottom: 30px;
+    }
   }
-  &__veriants-gallery {
+  &__variants-gallery {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 65px;
@@ -196,7 +207,7 @@
       // grid-template-columns: 1fr;
     }
   }
-  &__input-radio {
+  &__input-gallery-radio {
     display: none;
     &:checked + label {
       .s-quiz__var-img {
@@ -219,6 +230,245 @@
     object-fit: cover;
     margin-bottom: 15px;
 
-    transition: filter .2s ease;
+    transition: filter 0.2s ease;
+  }
+  &__variants {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    @include laptop-min {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__input-radio {
+    display: none;
+
+    &:checked + label {
+      &::before {
+        background-color: var(--dark);
+        border: 5px solid white;
+      }
+    }
+  }
+  &__label-radio {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    border-radius: 75px;
+    border: 1px solid white;
+    font-size: 15px;
+    transition: opacity 0.2s ease;
+    @include hover {
+      opacity: 0.7;
+    }
+
+    &::before {
+      content: "";
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: white;
+    }
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 40px;
+    min-height: 100%;
+    flex: 1;
+
+    transition: opacity .3s ease;
+  }
+  &__form-nav {
+    transition: opacity 0.3s ease;
+    @include flex-between;
+    gap: 30px;
+
+    @include tablet {
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+  }
+  &__form-nav-btn {
+    width: 225px;
+    max-width: 100%;
+    padding-left: 25px !important;
+    padding-right: 25px !important;
+
+    @include tablet {
+      width: auto;
+      flex: 1;
+    }
+    @include mobile {
+      width: 100%;
+      flex: none;
+    }
+
+    svg {
+      width: 10px;
+      height: 10px;
+    }
+  }
+  &__pagination {
+    @include flex-center;
+    gap: 10px;
+    @include tablet {
+      display: none;
+    }
+
+    div {
+      cursor: pointer;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: currentColor;
+
+      transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
+      @include hover {
+        opacity: 0.7;
+      }
+
+      &._active {
+        transform: scale(1.45);
+      }
+    }
+  }
+  &__end {
+    display: flex;
+    align-items: center;
+    transition: opacity 0.3s ease;
+  }
+  &__form-gallery {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 575px;
+    left: 10%;
+
+    z-index: -1;
+
+    @include laptop {
+      width: 400px;
+      left: 5%;
+    }
+    @include laptop-min {
+      left: auto;
+      right: 0;
+      width: 300px;
+    }
+    @include tablet {
+      display: none;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__form-body {
+    max-width: 500px;
+    margin-left: auto;
+    @include laptop-min {
+      margin-left: 0;
+    }
+    @include tablet {
+      max-width: none;
+    }
+  }
+  &__form-logo {
+    display: block;
+    width: 165px;
+    margin-bottom: 70px;
+
+    img {
+      display: block;
+      width: 100%;
+    }
+    @include tablet {
+      margin-bottom: 30px;
+    }
+  }
+  &__form-content {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 156%;
+    margin: 0px 0px 50px 0px;
+    @include laptop-min {
+      font-size: 24px;
+      max-width: 400px;
+      margin-bottom: 30px;
+    }
+    @include tablet {
+      max-width: none;
+      font-size: 20px;
+      line-height: 130%;
+    }
+  }
+  &__form-main {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    max-width: 370px;
+    @include tablet {
+      max-width: none;
+    }
+  }
+  &__form-submit {
+    width: 100%;
+  }
+  &__docs {
+  }
+  &__docs-title {
+    margin-bottom: 60px;
+    @include laptop-min {
+      margin-bottom: 40px;
+    }
+    @include tablet {
+      margin-bottom: 30px;
+    }
+  }
+  &__docs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    @include laptop-min {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__docs-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 19px 25px;
+    border: 1px solid white;
+    border-radius: 75px;
+
+    font-size: 15px;
+
+    transition: opacity .2s ease;
+
+    @include hover {
+      opacity: 0.7;
+    }
+
+    svg {
+      display: block;
+      margin-left: auto;
+      width: 25px;
+      height: 25px;
+    }
   }
 }
