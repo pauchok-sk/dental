@@ -186,6 +186,9 @@ body {
   font-size: 40px;
   margin: 0 0 40px 0
 }
+.s-title._center {
+  text-align: center
+}
 .sect-head {
   display: flex;
   align-items: center;
@@ -255,7 +258,7 @@ body {
   color: var(--dark)
 }
 .btn-s._white-outline {
-  background-color: var(--dark);
+  background-color: rgba(0,0,0,0);
   color: #fff;
   border-color: #fff
 }
@@ -397,6 +400,30 @@ body {
 }
 .label-policy a {
   text-decoration: underline;
+  color: #939393
+}
+.card-spec__img {
+  display: block;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: top;
+  object-position: top;
+  aspect-ratio: 1/1.33;
+  border-radius: 8px
+}
+.card-spec__body {
+  margin-top: 15px
+}
+.card-spec__title {
+  font-size: 16px;
+  line-height: 128%;
+  color: var(--dark);
+  margin: 0 0 5px 0
+}
+.card-spec__content {
+  font-size: 11px;
+  line-height: 155%;
   color: #939393
 }
 .burger-overlay {
@@ -1095,7 +1122,10 @@ body {
 }
 .s-res__slide-range {
   position: absolute;
+  cursor: -webkit-grab;
+  cursor: grab;
   inset: 0;
+  opacity: 0;
   z-index: 10
 }
 .s-res__slide-toggle {
@@ -1140,6 +1170,147 @@ body {
   margin: 0;
   font-size: 15px
 }
+.s-steps__body {
+  padding-top: 50px;
+  border-radius: 16px;
+  overflow: hidden;
+  width: 100%;
+  color: #fff;
+  background-color: var(--dark)
+}
+.s-steps__grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr)
+}
+.s-steps__item {
+  padding: 30px 40px;
+  min-height: 350px;
+  border-radius: 6px 6px 0 0;
+  transition: color .2s ease,background-color .2s ease
+}
+.s-steps__item:first-child {
+  border-radius: 0 6px 0 0
+}
+.s-steps__item:last-child {
+  border-radius: 6px 0 0 0
+}
+.s-steps__item-num {
+  font-weight: 600;
+  font-size: 80px;
+  margin-bottom: 32px
+}
+.s-steps__item-content {
+  font-size: 18px;
+  margin: 0
+}
+.s-gallery__slide {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: calc(25% - 15px)!important;
+  height: 470px!important
+}
+.s-gallery__slide._full {
+  width: calc(50% - 15px)!important
+}
+.s-gallery__slide._full a {
+  height: 100%!important
+}
+.s-gallery__slide a {
+  position: relative;
+  display: block;
+  width: 100%;
+  border: 2px solid var(--gray);
+  border-radius: 8px;
+  overflow: hidden;
+  height: calc(50% - 10px)
+}
+.s-gallery__slide a::before {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background-color: #000;
+  opacity: .5;
+  transition: opacity .2s ease
+}
+.s-gallery__slide a img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover
+}
+.s-team {
+  border-radius: 16px 16px 0 0;
+  background-color: var(--gray)
+}
+.s-connect {
+  background-color: var(--gray);
+  border-radius: 0 0 16px 16px;
+  padding-top: 0!important
+}
+.s-connect__body {
+  position: relative;
+  padding: 65px 50px;
+  background-color: var(--dark);
+  border-radius: 16px;
+  color: #fff;
+  overflow: hidden;
+  z-index: 1
+}
+.s-connect__main {
+  max-width: 515px
+}
+.s-connect__title {
+  margin-bottom: 20px
+}
+.s-connect__content {
+  font-size: 20px;
+  line-height: 125%;
+  margin: 0 0 40px 0
+}
+.s-connect__form {
+  width: 100%
+}
+.s-connect__form-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px
+}
+.s-connect__form-wrapper .input-control {
+  flex: 1
+}
+.s-connect__policy {
+  margin-top: 20px
+}
+.s-connect__form-submit {
+  margin-top: 20px;
+  width: 100%
+}
+.s-connect__img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1
+}
+.s-connect__logo {
+  position: absolute;
+  top: 65px;
+  right: 65px;
+  z-index: -2
+}
+.s-social__slide {
+  border-radius: 8px;
+  overflow: hidden;
+  aspect-ratio: 1/1.77
+}
+.s-social__slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover
+}
 @media (max-width:1365px) {
   .header__logo {
     width: 140px
@@ -1147,6 +1318,12 @@ body {
   .s-quiz__form-gallery {
     width: 400px;
     left: 5%
+  }
+  .s-connect__img {
+    width: 500px
+  }
+  .s-connect__logo {
+    width: 450px
   }
 }
 @media (max-width:1199px) {
@@ -1189,6 +1366,20 @@ body {
   }
   .s-quiz__variants-gallery {
     gap: 30px
+  }
+  .s-steps__item {
+    padding: 25px
+  }
+  .s-steps__item-num {
+    font-size: 60px
+  }
+  .s-steps__item-content {
+    font-size: 16px
+  }
+  .s-connect__logo {
+    width: 300px;
+    top: 30px;
+    right: 30px
   }
 }
 @media (max-width:991px) {
@@ -1284,6 +1475,26 @@ body {
   }
   .s-quiz__docs-grid {
     grid-template-columns: repeat(2,1fr)
+  }
+  .s-steps__grid {
+    grid-template-columns: repeat(2,1fr)
+  }
+  .s-steps__item {
+    min-height: auto
+  }
+  .s-gallery__slide {
+    height: 365px!important
+  }
+  .s-connect__body {
+    padding: 30px
+  }
+  .s-connect__img {
+    width: 250px
+  }
+  .s-connect__logo {
+    position: static;
+    display: block;
+    margin-bottom: 20px
   }
 }
 @media (max-width:767px) {
@@ -1421,6 +1632,22 @@ body {
   .s-quiz__docs-grid {
     grid-template-columns: 1fr
   }
+  .s-steps__grid {
+    grid-template-columns: 1fr
+  }
+  .s-gallery__slide {
+    width: calc(50% - 10px)!important
+  }
+  .s-gallery__slide._full {
+    width: calc(50% - 10px)!important
+  }
+  .s-connect__content {
+    font-size: 18px;
+    margin-bottom: 25px
+  }
+  .s-connect__img {
+    display: none
+  }
 }
 @media (max-width:575px) {
   .intro__title {
@@ -1460,6 +1687,31 @@ body {
   .s-quiz__tel span {
     display: none
   }
+  .s-steps__item-num {
+    margin-bottom: 20px
+  }
+  .s-gallery__slide {
+    width: 100%!important
+  }
+  .s-gallery__slide._full {
+    width: 100%!important
+  }
+  .s-connect__body {
+    padding: 20px 15px
+  }
+  .s-connect__content {
+    font-size: 16px
+  }
+  .s-connect__form-wrapper {
+    gap: 15px
+  }
+  .s-connect__form-wrapper .input-control {
+    flex: none;
+    width: 100%
+  }
+  .s-connect__logo {
+    width: 200px
+  }
 }
 @media (max-width:479px) {
   .s-quiz__variants {
@@ -1468,6 +1720,15 @@ body {
   .s-quiz__form-nav-btn {
     width: 100%;
     flex: none
+  }
+  .s-team {
+    overflow: hidden
+  }
+  .s-team__slider {
+    overflow: visible!important
+  }
+  .s-team__slider .card-spec {
+    width: 305px!important
   }
 }
 @media (any-hover:hover) {
@@ -1533,6 +1794,13 @@ body {
   .s-quiz__docs-btn:hover {
     opacity: .7
   }
+  .s-steps__item:hover {
+    background-color: var(--gray);
+    color: var(--dark)
+  }
+  .s-gallery__slide a:hover::before {
+    opacity: 0
+  }
 }
 @media (hover:none) {
   .btn-rect:active {
@@ -1596,5 +1864,12 @@ body {
   }
   .s-quiz__docs-btn:active {
     opacity: .7
+  }
+  .s-steps__item:active {
+    background-color: var(--gray);
+    color: var(--dark)
+  }
+  .s-gallery__slide a:active::before {
+    opacity: 0
   }
 }

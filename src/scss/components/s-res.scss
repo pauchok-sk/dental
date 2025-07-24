@@ -35,7 +35,9 @@
   }
   &__slide-range {
     position: absolute;
+    cursor: grab;
     inset: 0;
+    opacity: 0;
     z-index: 10;
   }
   &__slide-toggle {

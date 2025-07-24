@@ -1,5 +1,37 @@
 (() => {
     "use strict";
+    function anchors_anchors() {
+        document.querySelectorAll("[data-anchor]").forEach(link => {
+            link.addEventListener("click", function(e) {
+                e.preventDefault();
+                let href = this.getAttribute("href").substring(1);
+                const scrollTarget = document.getElementById(href);
+                if (scrollTarget) window.scrollBy({
+                    top: scrollTarget.getBoundingClientRect().top,
+                    behavior: "smooth"
+                });
+            });
+        });
+    }
+    function beforeAfter() {
+        const containers = document.querySelectorAll(".s-res__slide-gallery");
+        if (containers.length) containers.forEach(container => {
+            const range = container.querySelector(".s-res__slide-range");
+            const imgBefore = container.querySelector(".s-res__slide-before");
+            const toggle = container.querySelector(".s-res__slide-toggle");
+            range.addEventListener("input", e => {
+                const value = +e.target.value;
+                imgBefore.style.width = `${value}%`;
+                toggle.style.left = `${value}%`;
+            });
+            range.addEventListener("mousedown", () => {
+                range.style.cursor = "grabbing";
+            });
+            range.addEventListener("mouseup", () => {
+                range.style.cursor = "grab";
+            });
+        });
+    }
     function burger() {
         const burgerOpen = document.querySelector("#burger-open");
         const burgerClose = document.querySelector("#burger-close");
@@ -46,6 +78,18 @@
                 lastScrollTop = scrollTop;
             });
         }
+    }
+    function maskTel() {
+        const inputs = document.querySelectorAll('input[type="tel"]');
+        const im = new Inputmask("+7 (999) 999-99-99");
+        im.mask(inputs);
+        inputs.forEach(input => {
+            input.addEventListener("keydown", e => {
+                const value = e.target.value;
+                value.split("");
+                if (value.length === 0 && (e.key === "8" || e.key === "7")) e.preventDefault();
+            });
+        });
     }
     function more() {
         const containers = document.querySelectorAll(".container-more");
@@ -162,11 +206,107 @@
         const resSlider = document.querySelector(".s-res__slider");
         if (resSlider) {
             new Swiper(resSlider, {
-                spaceBetween: 35,
-                slidesPerView: 4,
+                speed: 800,
+                spaceBetween: 20,
+                slidesPerView: 1,
                 navigation: {
                     prevEl: ".s-res .slider-btn._prev",
                     nextEl: ".s-res .slider-btn._next"
+                },
+                autoplay: {
+                    delay: 3500,
+                    disableOnInteraction: true
+                },
+                allowTouchMove: false,
+                breakpoints: {
+                    1100: {
+                        spaceBetween: 35,
+                        slidesPerView: 4,
+                        allowTouchMove: true
+                    },
+                    768: {
+                        spaceBetween: 25,
+                        slidesPerView: 3,
+                        allowTouchMove: true
+                    },
+                    480: {
+                        spaceBetween: 20,
+                        slidesPerView: 2,
+                        allowTouchMove: true
+                    }
+                }
+            });
+        }
+        const gallerySlider = document.querySelector(".s-gallery__slider");
+        if (gallerySlider) {
+            new Swiper(gallerySlider, {
+                speed: 800,
+                slidesPerView: "auto",
+                spaceBetween: 20,
+                navigation: {
+                    prevEl: ".s-gallery .slider-btn._prev",
+                    nextEl: ".s-gallery .slider-btn._next"
+                },
+                autoplay: {
+                    delay: 3500
+                }
+            });
+        }
+        const teamSlider = document.querySelector(".s-team__slider");
+        if (teamSlider) {
+            new Swiper(teamSlider, {
+                speed: 800,
+                slidesPerView: "auto",
+                spaceBetween: 15,
+                navigation: {
+                    prevEl: ".s-team .slider-btn._prev",
+                    nextEl: ".s-team .slider-btn._next"
+                },
+                autoplay: {
+                    delay: 3200
+                },
+                breakpoints: {
+                    992: {
+                        slidesPerView: 4,
+                        spaceBetween: 15
+                    },
+                    768: {
+                        slidesPerView: 3,
+                        spaceBetween: 15
+                    },
+                    480: {
+                        slidesPerView: 2,
+                        spaceBetween: 15
+                    }
+                }
+            });
+        }
+        const socialSlider = document.querySelector(".s-social__slider");
+        if (socialSlider) {
+            new Swiper(socialSlider, {
+                speed: 800,
+                slidesPerView: 1,
+                spaceBetween: 20,
+                navigation: {
+                    prevEl: ".s-social .slider-btn._prev",
+                    nextEl: ".s-social .slider-btn._next"
+                },
+                autoplay: {
+                    delay: 3200
+                },
+                breakpoints: {
+                    992: {
+                        slidesPerView: 4,
+                        spaceBetween: 20
+                    },
+                    768: {
+                        slidesPerView: 3,
+                        spaceBetween: 20
+                    },
+                    480: {
+                        slidesPerView: 2,
+                        spaceBetween: 20
+                    }
                 }
             });
         }
@@ -390,5 +530,8 @@
     more();
     tabs();
     quiz();
+    beforeAfter();
+    maskTel();
+    anchors_anchors();
     Fancybox.bind("[data-fancybox]", {});
 })();

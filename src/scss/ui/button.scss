@@ -64,7 +64,7 @@
     }
   }
   &._white-outline {
-    background-color: var(--dark);
+    background-color: transparent;
     color: white;
     border-color: white;
     @include hover {

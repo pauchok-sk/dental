@@ -1,0 +1,102 @@
+.s-connect {
+  background-color: var(--gray);
+  border-radius: 0px 0px 16px 16px;
+  padding-top: 0 !important;
+  &__body {
+    position: relative;
+    padding: 65px 50px;
+    background-color: var(--dark);
+    border-radius: 16px;
+    color: white;
+    overflow: hidden;
+    z-index: 1;
+    @include laptop-min {
+      padding: 30px;
+    }
+    @include tablet-min {
+      padding: 20px 15px;
+    }
+  }
+  &__main {
+    max-width: 515px;
+  }
+  &__title {
+    margin-bottom: 20px;
+  }
+  &__content {
+    font-size: 20px;
+    line-height: 125%;
+    margin: 0px 0px 40px 0px;
+    @include tablet {
+      font-size: 18px;
+      margin-bottom: 25px;
+    }
+    @include tablet-min {
+      font-size: 16px;
+    }
+  }
+  &__form {
+    width: 100%;
+  }
+  &__form-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+
+    @include tablet-min {
+      gap: 15px;
+    }
+
+    .input-control {
+      flex: 1;
+      @include tablet-min {
+        flex: none;
+        width: 100%;
+      }
+    }
+  }
+  &__policy {
+    margin-top: 20px;
+  }
+  &__form-submit {
+    margin-top: 20px;
+    width: 100%;
+  }
+  &__img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    @include laptop {
+      width: 500px;
+    }
+    @include laptop-min {
+      width: 250px;
+    }
+    @include tablet {
+      display: none;
+    }
+  }
+  &__logo {
+    position: absolute;
+    top: 65px;
+    right: 65px;
+    z-index: -2;
+    @include laptop {
+      width: 450px;
+    }
+    @include laptop-middle {
+      width: 300px;
+      top: 30px;
+      right: 30px;
+    }
+    @include laptop-min {
+      position: static;
+      display: block;
+      margin-bottom: 20px;
+    }
+    @include tablet-min {
+      width: 200px;
+    }
+  }
+}

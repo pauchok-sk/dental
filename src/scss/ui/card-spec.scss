@@ -1,0 +1,24 @@
+.card-spec {
+  &__img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+    aspect-ratio: 1/1.33;
+    border-radius: 8px;
+  }
+  &__body {
+    margin-top: 15px;
+  }
+  &__title {
+    font-size: 16px;
+    line-height: 128%;
+    color: var(--dark);
+    margin: 0px 0px 5px 0px;
+  }
+  &__content {
+    font-size: 11px;
+    line-height: 155%;
+    color: #939393;
+  }
+}

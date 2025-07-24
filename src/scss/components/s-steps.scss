@@ -1,0 +1,61 @@
+.s-steps {
+  &__body {
+    padding-top: 50px;
+    border-radius: 16px;
+    overflow: hidden;
+    width: 100%;
+    color: white;
+    background-color: var(--dark);
+  }
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    @include laptop-min {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__item {
+    padding: 30px 40px;
+    min-height: 350px;
+    border-radius: 6px 6px 0px 0px;
+    transition: color .2s ease, background-color .2s ease;
+    @include hover {
+      background-color: var(--gray);
+      color: var(--dark);
+    }
+    @include laptop-middle {
+      padding: 25px;
+    }
+    @include laptop-min {
+      min-height: auto;
+    }
+
+    &:first-child {
+      border-radius: 0px 6px 0px 0px;
+    }
+    &:last-child {
+      border-radius: 6px 0px 0px 0px;
+    }
+  }
+  &__item-num {
+    font-weight: 600;
+    font-size: 80px;
+    margin-bottom: 32px;
+    @include laptop-middle {
+      font-size: 60px;
+    }
+    @include tablet-min {
+      margin-bottom: 20px;
+    }
+  }
+  &__item-content {
+    font-size: 18px;
+    margin: 0;
+    @include laptop-middle {
+      font-size: 16px;
+    }
+  }
+}

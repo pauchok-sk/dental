@@ -1,0 +1,18 @@
+.s-team {
+  border-radius: 16px 16px 0px 0px;
+  background-color: var(--gray);
+  @include mobile {
+    overflow: hidden;
+  }
+  &__slider {
+    @include mobile {
+      overflow: visible !important;
+    }
+
+    .card-spec {
+      @include mobile {
+        width: 305px !important;
+      }
+    }
+  }
+}

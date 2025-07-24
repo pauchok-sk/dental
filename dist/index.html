@@ -8,10 +8,10 @@
 	<link rel="shortcut icon" href="favicon.ico" />
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap&_v=20250724164616" rel="stylesheet" />
-	<link rel="stylesheet" href="./files/fancybox/fancybox.min.css?_v=20250724164616" />
-	<link rel="stylesheet" href="./files/swiper/swiper.min.css?_v=20250724164616" />
-	<link rel="stylesheet" href="css/style.min.css?_v=20250724164616" />
+	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap&_v=20250725010354" rel="stylesheet" />
+	<link rel="stylesheet" href="./files/fancybox/fancybox.min.css?_v=20250725010354" />
+	<link rel="stylesheet" href="./files/swiper/swiper.min.css?_v=20250725010354" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20250725010354" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
@@ -24,12 +24,12 @@
 				</a>
 				<nav class="header__nav">
 					<ul class="list header__list">
-						<li><a href="#">О лаборатории</a></li>
-						<li><a href="#">Услуги</a></li>
-						<li><a href="#">Результаты лечения</a></li>
-						<li><a href="#">Этапы производства</a></li>
-						<li><a href="#">Специалисты</a></li>
-						<li><a href="#">Контакты</a></li>
+						<li><a href="#s-about" data-anchor>О лаборатории</a></li>
+						<li><a href="#s-services" data-anchor>Услуги</a></li>
+						<li><a href="#s-res" data-anchor>Результаты лечения</a></li>
+						<li><a href="#s-steps" data-anchor>Этапы производства</a></li>
+						<li><a href="#s-team" data-anchor>Специалисты</a></li>
+						<li><a href="#s-contacts" data-anchor>Контакты</a></li>
 					</ul>
 				</nav>
 				<div class="header__contacts">
@@ -106,20 +106,20 @@
 							Закажите импланты для вашей практики и обеспечьте своих пациентов
 							качественными решениями
 						</p>
-						<a href="#" class="btn-s _white intro__item-btn">Заказать протезы</a>
+						<a data-anchor href="#s-connect" class="btn-s _white intro__item-btn">Заказать протезы</a>
 					</div>
 					<div class="intro__item">
 						<p class="intro__item-content">
 							Запишитесь на прием в нашу клинику и получите профессиональную
 							консультацию по установке имплантов
 						</p>
-						<a href="https://dentalresource.ru/" class="btn-s _white-outline intro__item-btn">Записаться в клинику</a>
+						<a href="https://dentalresource.ru/" target="_blank" class="btn-s _white-outline intro__item-btn">Записаться в клинику</a>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<section class="s-about sect-m">
+		<section class="s-about sect-m" id="s-about">
 			<div class="container">
 				<h2 class="s-title">О лаборатории</h2>
 				<div class="s-about__wrapper">
@@ -136,7 +136,7 @@
 								ваших пациентов с нашими инновационными продуктами!
 							</p>
 						</div>
-						<a href="#" class="btn-s s-about__btn">Этапы производства</a>
+						<a href="#s-steps" data-anchor class="btn-s s-about__btn">Этапы производства</a>
 					</div>
 					<a href="//github.com/mediaelement/mediaelement-files/blob/master/big_buck_bunny.mp4?raw=true" data-fancybox class="s-about__gallery">
 						<div class="play-btn">
@@ -150,7 +150,7 @@
 			</div>
 		</section>
 
-		<section class="s-services sect-p _gray">
+		<section class="s-services sect-p _gray" id="s-services">
 			<div class="container tabs">
 				<h2 class="s-title">Наши услуги</h2>
 				<div class="s-services__head">
@@ -200,7 +200,7 @@
 											</ul>
 										</div>
 									</div>
-									<a href="#" class="btn-s s-services__item-btn">
+									<a href="#s-connect" data-anchor class="btn-s s-services__item-btn">
 										Заказать импланты
 									</a>
 								</div>
@@ -230,7 +230,7 @@
 											</ul>
 										</div>
 									</div>
-									<a href="#" class="btn-s s-services__item-btn">
+									<a href="#s-connect" data-anchor class="btn-s s-services__item-btn">
 										Заказать импланты
 									</a>
 								</div>
@@ -260,7 +260,7 @@
 											</ul>
 										</div>
 									</div>
-									<a href="#" class="btn-s s-services__item-btn">
+									<a href="#s-connect" data-anchor class="btn-s s-services__item-btn">
 										Заказать импланты
 									</a>
 								</div>
@@ -290,7 +290,7 @@
 											</ul>
 										</div>
 									</div>
-									<a href="#" class="btn-s s-services__item-btn">
+									<a href="#s-connect" data-anchor class="btn-s s-services__item-btn">
 										Заказать импланты
 									</a>
 								</div>
@@ -320,7 +320,7 @@
 											</ul>
 										</div>
 									</div>
-									<a href="#" class="btn-s s-services__item-btn">
+									<a href="#s-connect" data-anchor class="btn-s s-services__item-btn">
 										Заказать импланты
 									</a>
 								</div>
@@ -350,7 +350,7 @@
 											</ul>
 										</div>
 									</div>
-									<a href="#" class="btn-s s-services__item-btn">
+									<a href="#s-connect" data-anchor class="btn-s s-services__item-btn">
 										Заказать импланты
 									</a>
 								</div>
@@ -380,7 +380,7 @@
 											</ul>
 										</div>
 									</div>
-									<a href="#" class="btn-s s-services__item-btn">
+									<a href="#s-connect" data-anchor class="btn-s s-services__item-btn">
 										Заказать импланты
 									</a>
 								</div>
@@ -410,7 +410,7 @@
 											</ul>
 										</div>
 									</div>
-									<a href="#" class="btn-s s-services__item-btn">
+									<a href="#s-connect" data-anchor class="btn-s s-services__item-btn">
 										Заказать импланты
 									</a>
 								</div>
@@ -450,7 +450,7 @@
 											</ul>
 										</div>
 									</div>
-									<a href="#" class="btn-s s-services__item-btn">
+									<a href="#s-connect" data-anchor class="btn-s s-services__item-btn">
 										Заказать импланты
 									</a>
 								</div>
@@ -480,7 +480,7 @@
 											</ul>
 										</div>
 									</div>
-									<a href="#" class="btn-s s-services__item-btn">
+									<a href="#s-connect" data-anchor class="btn-s s-services__item-btn">
 										Заказать импланты
 									</a>
 								</div>
@@ -510,7 +510,7 @@
 											</ul>
 										</div>
 									</div>
-									<a href="#" class="btn-s s-services__item-btn">
+									<a href="#s-connect" data-anchor class="btn-s s-services__item-btn">
 										Заказать импланты
 									</a>
 								</div>
@@ -530,7 +530,7 @@
 			</div>
 		</section>
 
-		<section class="s-quiz sect-p">
+		<section class="s-quiz sect-p" id="s-quiz">
 			<div class="s-quiz__slide _line" id="quiz-start">
 				<div class="container">
 					<div class="s-quiz__head">
@@ -727,7 +727,7 @@
 			</div>
 		</section>
 
-		<section class="sect-p s-res _gray">
+		<section class="sect-p s-res _gray" id="s-res">
 			<div class="container">
 				<div class="sect-head">
 					<h2 class="s-title">Результаты лечения</h2>
@@ -748,7 +748,87 @@
 					<div class="swiper-wrapper">
 						<article class="swiper-slide s-res__slide">
 							<div class="s-res__slide-gallery">
-								<input type="range" value="50" class="s-res__slide-range">
+								<input type="range" value="50" class="s-res__slide-range" />
+								<div class="s-res__slide-toggle">
+									<div class="s-res__slide-toggle-inside"></div>
+								</div>
+								<img src="img/before.jpg" alt="image" class="s-res__slide-before" />
+								<img src="img/after.jpg" alt="image" class="s-res__slide-after" />
+							</div>
+							<div class="s-res__slide-body">
+								<h5 class="s-res__slide-title">До и после All-On-4</h5>
+								<p class="s-res__slide-content">
+									Подробное описание проведенной процедуры...
+								</p>
+							</div>
+						</article>
+						<article class="swiper-slide s-res__slide">
+							<div class="s-res__slide-gallery">
+								<input type="range" value="50" class="s-res__slide-range" />
+								<div class="s-res__slide-toggle">
+									<div class="s-res__slide-toggle-inside"></div>
+								</div>
+								<img src="img/before.jpg" alt="image" class="s-res__slide-before" />
+								<img src="img/after.jpg" alt="image" class="s-res__slide-after" />
+							</div>
+							<div class="s-res__slide-body">
+								<h5 class="s-res__slide-title">До и после All-On-4</h5>
+								<p class="s-res__slide-content">
+									Подробное описание проведенной процедуры...
+								</p>
+							</div>
+						</article>
+						<article class="swiper-slide s-res__slide">
+							<div class="s-res__slide-gallery">
+								<input type="range" value="50" class="s-res__slide-range" />
+								<div class="s-res__slide-toggle">
+									<div class="s-res__slide-toggle-inside"></div>
+								</div>
+								<img src="img/before.jpg" alt="image" class="s-res__slide-before" />
+								<img src="img/after.jpg" alt="image" class="s-res__slide-after" />
+							</div>
+							<div class="s-res__slide-body">
+								<h5 class="s-res__slide-title">До и после All-On-4</h5>
+								<p class="s-res__slide-content">
+									Подробное описание проведенной процедуры...
+								</p>
+							</div>
+						</article>
+						<article class="swiper-slide s-res__slide">
+							<div class="s-res__slide-gallery">
+								<input type="range" value="50" class="s-res__slide-range" />
+								<div class="s-res__slide-toggle">
+									<div class="s-res__slide-toggle-inside"></div>
+								</div>
+								<img src="img/before.jpg" alt="image" class="s-res__slide-before" />
+								<img src="img/after.jpg" alt="image" class="s-res__slide-after" />
+							</div>
+							<div class="s-res__slide-body">
+								<h5 class="s-res__slide-title">До и после All-On-4</h5>
+								<p class="s-res__slide-content">
+									Подробное описание проведенной процедуры...
+								</p>
+							</div>
+						</article>
+						<article class="swiper-slide s-res__slide">
+							<div class="s-res__slide-gallery">
+								<input type="range" value="50" class="s-res__slide-range" />
+								<div class="s-res__slide-toggle">
+									<div class="s-res__slide-toggle-inside"></div>
+								</div>
+								<img src="img/before.jpg" alt="image" class="s-res__slide-before" />
+								<img src="img/after.jpg" alt="image" class="s-res__slide-after" />
+							</div>
+							<div class="s-res__slide-body">
+								<h5 class="s-res__slide-title">До и после All-On-4</h5>
+								<p class="s-res__slide-content">
+									Подробное описание проведенной процедуры...
+								</p>
+							</div>
+						</article>
+						<article class="swiper-slide s-res__slide">
+							<div class="s-res__slide-gallery">
+								<input type="range" value="50" class="s-res__slide-range" />
 								<div class="s-res__slide-toggle">
 									<div class="s-res__slide-toggle-inside"></div>
 								</div>
@@ -767,6 +847,305 @@
 			</div>
 		</section>
 
+		<section class="s-steps sect-m" id="s-steps">
+			<div class="container">
+				<div class="s-steps__body">
+					<h2 class="s-title _center">Этапы производства</h2>
+					<div class="s-steps__grid">
+						<div class="s-steps__item">
+							<div class="s-steps__item-num">01</div>
+							<p class="s-steps__item-content">
+								Подробное описание этапа производства в стоматологической
+								лаборатории Дентал Ресурс
+							</p>
+						</div>
+						<div class="s-steps__item">
+							<div class="s-steps__item-num">02</div>
+							<p class="s-steps__item-content">
+								Подробное описание этапа производства в стоматологической
+								лаборатории Дентал Ресурс
+							</p>
+						</div>
+						<div class="s-steps__item">
+							<div class="s-steps__item-num">03</div>
+							<p class="s-steps__item-content">
+								Подробное описание этапа производства в стоматологической
+								лаборатории Дентал Ресурс
+							</p>
+						</div>
+						<div class="s-steps__item">
+							<div class="s-steps__item-num">04</div>
+							<p class="s-steps__item-content">
+								Подробное описание этапа производства в стоматологической
+								лаборатории Дентал Ресурс
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="sect-m s-gallery" id="s-gallery">
+			<div class="container">
+				<div class="sect-head">
+					<h2 class="s-title">Обзор нашей лаборатории</h2>
+					<div class="slider-nav">
+						<div class="slider-btn _prev">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#icon-arrow-prev"></use>
+							</svg>
+						</div>
+						<div class="slider-btn _next">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#icon-arrow-next"></use>
+							</svg>
+						</div>
+					</div>
+				</div>
+				<div class="swiper s-gallery__slider">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide s-gallery__slide _full">
+							<a href="img/gallery.jpg" data-fancybox="gallery" class="s-gallery__slide-item">
+								<img src="img/gallery.jpg" alt="image" />
+							</a>
+						</div>
+						<div class="swiper-slide s-gallery__slide">
+							<a href="img/gallery.jpg" data-fancybox="gallery" class="s-gallery__slide-item">
+								<img src="img/gallery.jpg" alt="image" />
+							</a>
+							<a href="img/gallery.jpg" data-fancybox="gallery" class="s-gallery__slide-item">
+								<img src="img/gallery.jpg" alt="image" />
+							</a>
+						</div>
+						<div class="swiper-slide s-gallery__slide">
+							<a href="img/gallery.jpg" data-fancybox="gallery" class="s-gallery__slide-item">
+								<img src="img/gallery.jpg" alt="image" />
+							</a>
+							<a href="img/gallery.jpg" data-fancybox="gallery" class="s-gallery__slide-item">
+								<img src="img/gallery.jpg" alt="image" />
+							</a>
+						</div>
+						<div class="swiper-slide s-gallery__slide">
+							<a href="img/gallery.jpg" data-fancybox="gallery" class="s-gallery__slide-item">
+								<img src="img/gallery.jpg" alt="image" />
+							</a>
+							<a href="img/gallery.jpg" data-fancybox="gallery" class="s-gallery__slide-item">
+								<img src="img/gallery.jpg" alt="image" />
+							</a>
+						</div>
+						<div class="swiper-slide s-gallery__slide">
+							<a href="img/gallery.jpg" data-fancybox="gallery" class="s-gallery__slide-item">
+								<img src="img/gallery.jpg" alt="image" />
+							</a>
+							<a href="img/gallery.jpg" data-fancybox="gallery" class="s-gallery__slide-item">
+								<img src="img/gallery.jpg" alt="image" />
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="sect-p s-team" id="s-team">
+			<div class="container">
+				<div class="sect-head">
+					<h2 class="s-title">Специалисты лаборатории</h2>
+					<div class="slider-nav">
+						<div class="slider-btn _prev">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#icon-arrow-prev"></use>
+							</svg>
+						</div>
+						<div class="slider-btn _next">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#icon-arrow-next"></use>
+							</svg>
+						</div>
+					</div>
+				</div>
+				<div class="swiper s-team__slider">
+					<div class="swiper-wrapper">
+						<article class="swiper-slide card-spec">
+							<img src="img/spec.jpg" alt="image" class="card-spec__img" />
+							<div class="card-spec__body">
+								<h5 class="card-spec__title">Савин Кирилл Дмитриевич</h5>
+								<p class="card-spec__content">
+									Основатель лаборатории и
+									<br />
+									стоматологии Dental Resource
+								</p>
+							</div>
+						</article>
+						<article class="swiper-slide card-spec">
+							<img src="img/spec.jpg" alt="image" class="card-spec__img" />
+							<div class="card-spec__body">
+								<h5 class="card-spec__title">Савин Кирилл Дмитриевич</h5>
+								<p class="card-spec__content">
+									Основатель лаборатории и
+									<br />
+									стоматологии Dental Resource
+								</p>
+							</div>
+						</article>
+						<article class="swiper-slide card-spec">
+							<img src="img/spec.jpg" alt="image" class="card-spec__img" />
+							<div class="card-spec__body">
+								<h5 class="card-spec__title">Савин Кирилл Дмитриевич</h5>
+								<p class="card-spec__content">
+									Основатель лаборатории и
+									<br />
+									стоматологии Dental Resource
+								</p>
+							</div>
+						</article>
+						<article class="swiper-slide card-spec">
+							<img src="img/spec.jpg" alt="image" class="card-spec__img" />
+							<div class="card-spec__body">
+								<h5 class="card-spec__title">Савин Кирилл Дмитриевич</h5>
+								<p class="card-spec__content">
+									Основатель лаборатории и
+									<br />
+									стоматологии Dental Resource
+								</p>
+							</div>
+						</article>
+						<article class="swiper-slide card-spec">
+							<img src="img/spec.jpg" alt="image" class="card-spec__img" />
+							<div class="card-spec__body">
+								<h5 class="card-spec__title">Савин Кирилл Дмитриевич</h5>
+								<p class="card-spec__content">
+									Основатель лаборатории и
+									<br />
+									стоматологии Dental Resource
+								</p>
+							</div>
+						</article>
+						<article class="swiper-slide card-spec">
+							<img src="img/spec.jpg" alt="image" class="card-spec__img" />
+							<div class="card-spec__body">
+								<h5 class="card-spec__title">Савин Кирилл Дмитриевич</h5>
+								<p class="card-spec__content">
+									Основатель лаборатории и
+									<br />
+									стоматологии Dental Resource
+								</p>
+							</div>
+						</article>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="s-connect sect-p" id="s-connect">
+			<div class="container">
+				<div class="s-connect__body">
+					<img src="img/connect.png" alt="image" class="s-connect__img" />
+					<img src="img/connect-logo.svg" alt="image" class="s-connect__logo" />
+					<div class="s-connect__main">
+						<h2 class="s-title s-connect__title">
+							Связаться с лабораторией и получить прайс-лист
+						</h2>
+						<p class="s-connect__content">
+							Оставьте заявку на консультацию. Мы свяжемся с вами для уточнения
+							деталей и запишем на прием.
+						</p>
+						<form action="#" class="s-connect__form">
+							<div class="s-connect__form-wrapper">
+								<div class="input-control">
+									<input type="text" placeholder="Имя и фамилия" class="input" />
+								</div>
+								<div class="input-control">
+									<input type="tel" placeholder="Телефон" class="input" />
+								</div>
+							</div>
+							<input type="checkbox" id="connect-policy" checked required class="input-policy" />
+							<label for="connect-policy" class="label-policy s-connect__policy">
+								<span>
+									Я соглашаюсь с условиями
+									<a href="#" target="_blank">политике конфиденциальности</a>
+								</span>
+							</label>
+							<button class="btn-s s-connect__form-submit _white-outline">
+								Отправить
+							</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="s-social sect-m">
+			<div class="container">
+				<div class="sect-head">
+					<h2 class="s-title">Наша деятельность в соц. сетях</h2>
+					<div class="slider-nav">
+						<div class="slider-btn _prev">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#icon-arrow-prev"></use>
+							</svg>
+						</div>
+						<div class="slider-btn _next">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#icon-arrow-next"></use>
+							</svg>
+						</div>
+					</div>
+				</div>
+				<div class="swiper s-social__slider">
+					<div class="swiper-wrapper">
+						<a href="//github.com/mediaelement/mediaelement-files/blob/master/big_buck_bunny.mp4?raw=true" data-fancybox class="swiper-slide s-social__slide">
+							<img src="img/social-img.jpg" alt="image" />
+							<div class="play-btn">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-play"></use>
+								</svg>
+							</div>
+						</a>
+						<a href="//github.com/mediaelement/mediaelement-files/blob/master/big_buck_bunny.mp4?raw=true" data-fancybox class="swiper-slide s-social__slide">
+							<img src="img/social-img.jpg" alt="image" />
+							<div class="play-btn">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-play"></use>
+								</svg>
+							</div>
+						</a>
+						<a href="//github.com/mediaelement/mediaelement-files/blob/master/big_buck_bunny.mp4?raw=true" data-fancybox class="swiper-slide s-social__slide">
+							<img src="img/social-img.jpg" alt="image" />
+							<div class="play-btn">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-play"></use>
+								</svg>
+							</div>
+						</a>
+						<a href="//github.com/mediaelement/mediaelement-files/blob/master/big_buck_bunny.mp4?raw=true" data-fancybox class="swiper-slide s-social__slide">
+							<img src="img/social-img.jpg" alt="image" />
+							<div class="play-btn">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-play"></use>
+								</svg>
+							</div>
+						</a>
+						<a href="//github.com/mediaelement/mediaelement-files/blob/master/big_buck_bunny.mp4?raw=true" data-fancybox class="swiper-slide s-social__slide">
+							<img src="img/social-img.jpg" alt="image" />
+							<div class="play-btn">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-play"></use>
+								</svg>
+							</div>
+						</a>
+						<a href="//github.com/mediaelement/mediaelement-files/blob/master/big_buck_bunny.mp4?raw=true" data-fancybox class="swiper-slide s-social__slide">
+							<img src="img/social-img.jpg" alt="image" />
+							<div class="play-btn">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-play"></use>
+								</svg>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
 
 	</main>
 	<footer class="footer">
@@ -774,9 +1153,10 @@
 		</div>
 	</footer>
 
-	<script src="./files/fancybox/fancybox.min.js?_v=20250724164616"></script>
-	<script src="./files/swiper/swiper.min.js?_v=20250724164616"></script>
-	<script src="js/app.min.js?_v=20250724164616"></script>
+	<script src="./files/fancybox/fancybox.min.js?_v=20250725010354"></script>
+	<script src="./files/swiper/swiper.min.js?_v=20250725010354"></script>
+	<script src="./files/inputmask/inputmask.min.js?_v=20250725010354"></script>
+	<script src="js/app.min.js?_v=20250725010354"></script>
 </body>
 
 </html>
