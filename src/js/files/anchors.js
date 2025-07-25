@@ -1,3 +1,5 @@
+import { handlerBurgerClose } from "./burger.js";
+
 export default function anchors() {
   document.querySelectorAll("[data-anchor]").forEach((link) => {
     link.addEventListener("click", function (e) {
@@ -12,6 +14,8 @@ export default function anchors() {
           top: scrollTarget.getBoundingClientRect().top,
           behavior: "smooth",
         });
+
+        handlerBurgerClose();
       }
     });
   });

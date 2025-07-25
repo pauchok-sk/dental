@@ -3,6 +3,7 @@ import anchors from "./files/anchors.js";
 import beforeAfter from "./files/beforeAfter.js";
 import burger from "./files/burger.js";
 import headerScroll from "./files/headerScroll.js";
+import map from "./files/map.js";
 import maskTel from "./files/maskTel.js";
 import more from "./files/more.js";
 import quiz from "./files/quiz.js";
@@ -20,5 +21,6 @@ quiz();
 beforeAfter();
 maskTel();
 anchors();
+map();
 
 Fancybox.bind("[data-fancybox]", {});

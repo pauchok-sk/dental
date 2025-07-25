@@ -8,10 +8,10 @@
 	<link rel="shortcut icon" href="favicon.ico" />
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap&_v=20250725010354" rel="stylesheet" />
-	<link rel="stylesheet" href="./files/fancybox/fancybox.min.css?_v=20250725010354" />
-	<link rel="stylesheet" href="./files/swiper/swiper.min.css?_v=20250725010354" />
-	<link rel="stylesheet" href="css/style.min.css?_v=20250725010354" />
+	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap&_v=20250725153728" rel="stylesheet" />
+	<link rel="stylesheet" href="./files/fancybox/fancybox.min.css?_v=20250725153728" />
+	<link rel="stylesheet" href="./files/swiper/swiper.min.css?_v=20250725153728" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20250725153728" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
@@ -65,12 +65,12 @@
 			</div>
 		</div>
 		<ul class="list burger__list">
-			<li><a href="#">О лаборатории</a></li>
-			<li><a href="#">Услуги</a></li>
-			<li><a href="#">Результаты лечения</a></li>
-			<li><a href="#">Этапы производство</a></li>
-			<li><a href="#">Специалисты</a></li>
-			<li><a href="#">Контакты</a></li>
+			<li><a href="#s-about" data-anchor>О лаборатории</a></li>
+			<li><a href="#s-services" data-anchor>Услуги</a></li>
+			<li><a href="#s-res" data-anchor>Результаты лечения</a></li>
+			<li><a href="#s-steps" data-anchor>Этапы производства</a></li>
+			<li><a href="#s-team" data-anchor>Специалисты</a></li>
+			<li><a href="#s-contacts" data-anchor>Контакты</a></li>
 		</ul>
 		<div class="burger__contacts">
 			<a href="tel:+79872179999" class="burger__tel">+7 (987) 217‒99‒99</a>
@@ -1146,17 +1146,139 @@
 			</div>
 		</section>
 
+		<section class="s-contacts sect-m" id="s-contacts">
+			<div class="container">
+				<h2 class="s-title">Контакты</h2>
+				<div class="s-contacts__wrapper">
+					<div class="s-contacts__body">
+						<img src="img/logo-white.svg" alt="logo" class="s-contacts__logo" />
+						<a href="tel:+79872179999" class="s-contacts__tel">
+							+7 (987) 217‒99‒99
+						</a>
+						<p class="s-contacts__content">
+							г. Москва, ул. Авиамоторная, 32Б
+							<br />
+							Пн-Вс: 10:00-21:00
+						</p>
+						<div class="s-contacts__social">
+							<a href="#" target="_blank" class="btn-rect _white">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-yt"></use>
+								</svg>
+							</a>
+							<a href="#" target="_blank" class="btn-rect _white">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-tg"></use>
+								</svg>
+							</a>
+							<a href="#" target="_blank" class="btn-rect _white">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-gis"></use>
+								</svg>
+							</a>
+							<a href="#" target="_blank" class="btn-rect _white">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-ya"></use>
+								</svg>
+							</a>
+						</div>
+						<a href="#s-connect" data-anchor class="btn-s _white s-contacts__btn">
+							Заказать импланты
+						</a>
+					</div>
+					<div class="s-contacts__map" data-center="[55.74480956897836,37.7204295]" data-zoom="17" id="map"></div>
+				</div>
+			</div>
+		</section>
+
 
 	</main>
 	<footer class="footer">
 		<div class="container">
+			<div class="footer__wrapper">
+				<div class="footer__main">
+					<a href="/" class="footer__logo">
+						<img src="img/logo-white.svg" alt="logo" />
+					</a>
+					<p class="footer__content">
+						ООО “ВАЙТ ЛАЙН” ИНН 7722473993 <br>
+						<a href="https://dentalresource.ru/info" target="_blank">
+							Лицензия № Л041-01137-77/00498302 Оператор персональных данных в
+							реестре: 77-25-171186
+						</a>
+					</p>
+				</div>
+				<nav class="footer__nav">
+					<ul class="list footer__list">
+						<li><a href="#s-about" data-anchor>О лаборатории</a></li>
+						<li><a href="#s-services" data-anchor>Услуги</a></li>
+						<li><a href="#s-team" data-anchor>Специалисты</a></li>
+					</ul>
+					<ul class="list footer__list">
+						<li><a href="#s-res" data-anchor>Результаты лечения</a></li>
+						<li><a href="#s-steps" data-anchor>Производство</a></li>
+						<li><a href="#s-contacts" data-anchor>Контакты</a></li>
+					</ul>
+				</nav>
+				<div class="footer__contacts">
+					<a href="tel:+79872179999" class="footer__tel">+7 (987) 217‒99‒99</a>
+					<p class="footer__contacts-content">
+						г. Москва, ул. Авиамоторная, 32Б
+						<br />
+						пн-вс: 10:00-21:00
+					</p>
+					<a href="mailto:dentalresource@mail.ru" class="footer__mail">
+						dentalresource@mail.ru
+					</a>
+					<a href="#s-connect" data-anchor class="btn-s _white-outline footer__contacts-btn">
+						Заказать импланты
+					</a>
+				</div>
+				<div class="footer__social">
+					<p class="footer__social-content">
+						© 2025 Dental Resource.
+						<br />
+						Все права защищены.
+					</p>
+					<div class="footer__social-items">
+						<a href="#" target="_blank" class="btn-rect _white">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#icon-yt"></use>
+							</svg>
+						</a>
+						<a href="#" target="_blank" class="btn-rect _white">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#icon-tg"></use>
+							</svg>
+						</a>
+						<a href="#" target="_blank" class="btn-rect _white">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#icon-gis"></use>
+							</svg>
+						</a>
+						<a href="#" target="_blank" class="btn-rect _white">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#icon-ya"></use>
+							</svg>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="footer__bottom">
+				<a href="#" target="_blank">Политика конфидециальности</a>
+				<div class="footer__bottom-end">
+					<a href="https://dentalresource.ru/" target="_blank">Сайт клиники</a>
+					<a href="#">Торговые марки</a>
+				</div>
+			</div>
 		</div>
 	</footer>
 
-	<script src="./files/fancybox/fancybox.min.js?_v=20250725010354"></script>
-	<script src="./files/swiper/swiper.min.js?_v=20250725010354"></script>
-	<script src="./files/inputmask/inputmask.min.js?_v=20250725010354"></script>
-	<script src="js/app.min.js?_v=20250725010354"></script>
+	<script src="./files/fancybox/fancybox.min.js?_v=20250725153728"></script>
+	<script src="./files/swiper/swiper.min.js?_v=20250725153728"></script>
+	<script src="./files/inputmask/inputmask.min.js?_v=20250725153728"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=b46e9249-4925-4460-b11c-3aaf76ad0115&lang=ru_RU&_v=20250725153728" type="text/javascript"></script>
+	<script src="js/app.min.js?_v=20250725153728"></script>
 </body>
 
 </html>

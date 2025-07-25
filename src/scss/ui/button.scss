@@ -23,6 +23,15 @@
     background-color: var(--dark);
   }
 
+  &._white {
+    background-color: white;
+    color: var(--dark);
+
+    @include hover {
+      background-color: #e9e2e2;
+    }
+  }
+
   svg {
     width: 16px;
     height: 16px;

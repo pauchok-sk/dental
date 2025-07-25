@@ -1,15 +1,54 @@
 (() => {
     "use strict";
+    function burger() {
+        const burgerOpen = document.querySelector("#burger-open");
+        const burgerClose = document.querySelector("#burger-close");
+        const burger = document.querySelector("#burger");
+        const burgerOverlay = document.querySelector("#burger-overlay");
+        if (burger) {
+            burger.addEventListener("click", e => e.stopPropagation());
+            burgerOverlay.addEventListener("click", handlerBurgerClose);
+            burgerOpen.addEventListener("click", e => {
+                e.stopPropagation();
+                handlerBurgerOpen();
+            });
+            burgerClose.addEventListener("click", e => {
+                e.stopPropagation();
+                handlerBurgerClose();
+            });
+            function handlerBurgerOpen() {
+                burger.classList.add("_open");
+                burgerOverlay.classList.add("_active");
+                document.body.classList.add("body-hidden");
+            }
+            function updateHeightBurger() {
+                burger.style.maxHeight = `${window.visualViewport.height}px`;
+            }
+            window.visualViewport.addEventListener("resize", updateHeightBurger);
+            window.visualViewport.addEventListener("scroll", updateHeightBurger);
+            updateHeightBurger();
+        }
+    }
+    function handlerBurgerClose() {
+        const burger = document.querySelector("#burger");
+        const burgerOverlay = document.querySelector("#burger-overlay");
+        burger.classList.remove("_open");
+        burgerOverlay.classList.remove("_active");
+        document.body.classList.remove("body-hidden");
+    }
     function anchors_anchors() {
         document.querySelectorAll("[data-anchor]").forEach(link => {
             link.addEventListener("click", function(e) {
                 e.preventDefault();
                 let href = this.getAttribute("href").substring(1);
                 const scrollTarget = document.getElementById(href);
-                if (scrollTarget) window.scrollBy({
-                    top: scrollTarget.getBoundingClientRect().top,
-                    behavior: "smooth"
-                });
+                if (scrollTarget) {
+                    window.scrollBy({
+                        top: scrollTarget.getBoundingClientRect().top,
+                        behavior: "smooth"
+                    });
+                    handlerBurgerClose();
+                }
             });
         });
     }
@@ -32,42 +71,6 @@
             });
         });
     }
-    function burger() {
-        const burgerOpen = document.querySelector("#burger-open");
-        const burgerClose = document.querySelector("#burger-close");
-        const burger = document.querySelector("#burger");
-        const burgerOverlay = document.querySelector("#burger-overlay");
-        if (burger) {
-            burger.addEventListener("click", e => e.stopPropagation());
-            burgerOverlay.addEventListener("click", handlerBurgerClose);
-            burgerOpen.addEventListener("click", e => {
-                e.stopPropagation();
-                handlerBurgerOpen();
-            });
-            burgerClose.addEventListener("click", e => {
-                e.stopPropagation();
-                handlerBurgerClose();
-            });
-            function handlerBurgerClose() {
-                burger.classList.remove("_open");
-                burgerOverlay.classList.remove("_active");
-                document.body.classList.remove("body-hidden");
-                document.body.removeEventListener("click", burgerClose);
-            }
-            function handlerBurgerOpen() {
-                burger.classList.add("_open");
-                burgerOverlay.classList.add("_active");
-                document.body.classList.add("body-hidden");
-                document.body.addEventListener("click", burgerClose);
-            }
-            function updateHeightBurger() {
-                burger.style.maxHeight = `${window.visualViewport.height}px`;
-            }
-            window.visualViewport.addEventListener("resize", updateHeightBurger);
-            window.visualViewport.addEventListener("scroll", updateHeightBurger);
-            updateHeightBurger();
-        }
-    }
     function headerScroll() {
         const header = document.querySelector(".header");
         if (header) {
@@ -77,6 +80,35 @@
                 if (scrollTop > header.clientHeight && scrollTop > lastScrollTop) header.classList.add("_scroll"); else header.classList.remove("_scroll");
                 lastScrollTop = scrollTop;
             });
+        }
+    }
+    function map() {
+        const contactsMap = document.querySelector("#map");
+        if (contactsMap) {
+            function init() {
+                const center = JSON.parse(contactsMap.dataset.center);
+                const zoom = Number(contactsMap.dataset.zoom);
+                const map = new ymaps.Map("map", {
+                    center,
+                    zoom
+                });
+                const placemark = new ymaps.Placemark(center, {}, {
+                    iconLayout: "default#image",
+                    iconImageHref: "./img/icon-map.svg",
+                    iconImageSize: [ 45, 45 ],
+                    iconImageOffset: [ -20, -40 ]
+                });
+                map.controls.remove("geolocationControl");
+                map.controls.remove("searchControl");
+                map.controls.remove("trafficControl");
+                map.controls.remove("typeSelector");
+                map.controls.remove("fullscreenControl");
+                map.controls.remove("zoomControl");
+                map.controls.remove("rulerControl");
+                map.behaviors.disable([ "scrollZoom" ]);
+                map.geoObjects.add(placemark);
+            }
+            ymaps.ready(init);
         }
     }
     function maskTel() {
@@ -533,5 +565,6 @@
     beforeAfter();
     maskTel();
     anchors_anchors();
+    map();
     Fancybox.bind("[data-fancybox]", {});
 })();

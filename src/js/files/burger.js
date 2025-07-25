@@ -18,20 +18,10 @@ export default function burger() {
       handlerBurgerClose();
     });
 
-    function handlerBurgerClose() {
-      burger.classList.remove("_open");
-      burgerOverlay.classList.remove("_active");
-      document.body.classList.remove("body-hidden");
-
-      document.body.removeEventListener("click", burgerClose);
-    }
-
     function handlerBurgerOpen() {
       burger.classList.add("_open");
       burgerOverlay.classList.add("_active");
       document.body.classList.add("body-hidden");
-
-      document.body.addEventListener("click", burgerClose);
     }
 
     function updateHeightBurger() {
@@ -43,4 +33,13 @@ export default function burger() {
 
     updateHeightBurger();
   }
+}
+
+export function handlerBurgerClose() {
+  const burger = document.querySelector("#burger");
+  const burgerOverlay = document.querySelector("#burger-overlay");
+
+  burger.classList.remove("_open");
+  burgerOverlay.classList.remove("_active");
+  document.body.classList.remove("body-hidden");
 }
